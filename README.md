@@ -28,7 +28,7 @@ O aplicativo atualmente se encontra em dois idiomas, o Inglês e o Português do
 
 ## Others
 - String resources (pt-BR e en-US)
-- Temas personalizados para as views
+- Estilos personalizados para as views (no arquivo themes.xml)
   - TextInputEditText
   - TextView
 
