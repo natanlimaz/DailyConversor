@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DailyConversor</string>
+    <string name="app_description">A measurement converter for your daily needs</string>
+    <string name="btn_start">Start</string>
+    <string name="result_description">The conversion result is:</string>
+    <string name="result">%.2f %s</string>
+    <string name="mass_input_label">Mass</string>
+    <string name="distance_input_label">Distance</string>
+    <string name="capacity_input_label">Volume</string>
+    <string name="spinner_label_input">Input Unit</string>
+    <string name="spinner_label_output">Output Unit</string>
+    <string name="btn_converter">Convert</string>
+    <string name="btn_new_calc">New Calculation</string>
+    <string name="default_result">0.0</string>
+
+    <string-array name="mass_conversion_table">
+        <item>Tons</item>
+        <item>Kilograms</item>
+        <item>Hectograms</item>
+        <item>Decagrams</item>
+        <item>Grams</item>
+        <item>Decigrams</item>
+        <item>Centigrams</item>
+        <item>Milligrams</item>
+    </string-array>
+
+    <string-array name="capacity_conversion_table">
+        <item>Kiloliters</item>
+        <item>Hectoliters</item>
+        <item>Decaliters</item>
+        <item>Liters</item>
+        <item>Deciliters</item>
+        <item>Centiliters</item>
+        <item>Milliliters</item>
+    </string-array>
+
+    <string-array name="distance_conversion_table">
+        <item>Kilometers</item>
+        <item>Hectometers</item>
+        <item>Decameters</item>
+        <item>Meters</item>
+        <item>Decimeters</item>
+        <item>Centimeters</item>
+        <item>Millimeters</item>
+    </string-array>
+
+</resources>

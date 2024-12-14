@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Conversor Diário</string>
+    <string name="app_description">Um conversor de medidas para seu dia a dia</string>
+    <string name="btn_start">Iniciar</string>
+    <string name="result_description">O resultado da conversão é:</string>
+    <string name="result">%.2f %s</string>
+    <string name="mass_input_label">Massa</string>
+    <string name="distance_input_label">Distância</string>
+    <string name="capacity_input_label">Volume</string>
+    <string name="spinner_label_input">Medida de entrada</string>
+    <string name="spinner_label_output">Medida de saída</string>
+    <string name="btn_converter">Converter</string>
+    <string name="btn_new_calc">Novo cálculo</string>
+    <string name="default_result">0.0</string>
+
+    <string-array name="mass_conversion_table">
+        <item>Toneladas</item>
+        <item>Quilogramas</item>
+        <item>Hectogramas</item>
+        <item>Decagramas</item>
+        <item>Gramas</item>
+        <item>Decigramas</item>
+        <item>Centigramas</item>
+        <item>Miligramas</item>
+    </string-array>
+
+    <string-array name="capacity_conversion_table">
+        <item>Quilolitros</item>
+        <item>Hectolitros</item>
+        <item>Decalitros</item>
+        <item>Litros</item>
+        <item>Decilitros</item>
+        <item>Centilitros</item>
+        <item>Mililitros</item>
+    </string-array>
+
+    <string-array name="distance_conversion_table">
+        <item>Quilômetros</item>
+        <item>Hectômetros</item>
+        <item>Decâmetros</item>
+        <item>Metros</item>
+        <item>Decímetros</item>
+        <item>Centímetros</item>
+        <item>Milímetros</item>
+    </string-array>
+
+</resources>

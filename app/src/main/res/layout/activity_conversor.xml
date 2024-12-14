@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ConversorActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:textColor="@color/yellow"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/result_description"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitle"
+        android:text="@string/default_result"
+        tools:text="780,00 Gramas" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEdtMassLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:theme="@style/DailyConversor.TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_mass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/mass_input_label"
+            android:inputType="numberDecimal"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/spinner_mass_label_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/DailyConversor.TextViewInputLabel"
+        android:text="@string/spinner_label_input"
+        app:layout_constraintStart_toStartOf="@+id/textInputEdtMassLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEdtMassLayout" />
+
+    <Spinner
+        android:id="@+id/spinner_mass_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/yellow"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_mass_label_input" />
+
+    <TextView
+        android:id="@+id/spinner_mass_label_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/DailyConversor.TextViewInputLabel"
+        android:text="@string/spinner_label_output"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEdtMassLayout" />
+
+    <Spinner
+        android:id="@+id/spinner_mass_output"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/yellow"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_mass_label_output" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEdtDistanceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:theme="@style/DailyConversor.TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_mass_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/distance_input_label"
+            android:inputType="numberDecimal"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/spinner_distance_label_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/DailyConversor.TextViewInputLabel"
+        android:text="@string/spinner_label_input"
+        app:layout_constraintStart_toStartOf="@+id/textInputEdtDistanceLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEdtDistanceLayout" />
+
+    <Spinner
+        android:id="@+id/spinner_distance_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/yellow"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_distance_label_input" />
+
+    <TextView
+        android:id="@+id/spinner_distance_label_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/DailyConversor.TextViewInputLabel"
+        android:text="@string/spinner_label_output"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEdtDistanceLayout" />
+
+    <Spinner
+        android:id="@+id/spinner_distance_output"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/yellow"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_distance_label_output" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEdtCapacityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:theme="@style/DailyConversor.TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_distance_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_capacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/capacity_input_label"
+            android:inputType="numberDecimal"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/spinner_capacity_label_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/DailyConversor.TextViewInputLabel"
+        android:text="@string/spinner_label_input"
+        app:layout_constraintStart_toStartOf="@+id/textInputEdtCapacityLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEdtCapacityLayout" />
+
+    <Spinner
+        android:id="@+id/spinner_capacity_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/yellow"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_capacity_label_input" />
+
+    <TextView
+        android:id="@+id/spinner_capacity_label_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/DailyConversor.TextViewInputLabel"
+        android:text="@string/spinner_label_output"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEdtCapacityLayout" />
+
+    <Spinner
+        android:id="@+id/spinner_capacity_output"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/yellow"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_capacity_label_output" />
+
+    <Button
+        android:id="@+id/btn_converter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/btn_converter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_new_calc"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/btn_new_calc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
